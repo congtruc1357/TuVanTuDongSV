@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1>Chào mừng, KingOhger</h1>
+        <ul class="header_menu">
+          <li><a href="/profile">Ảnh đại diện</a></li>
+          <li><a href="/settings">Sửa thông tin</a></li>
+          <li><a href="/logout">Đăng xuất</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main_navbar">
+        <a href="/admin/home" class="main-home">Trang chủ</a>
+        <nav>
+          <ul class="main-menu">
+            <li class="main-menu_item">
+              <a href="/admin/view-students" class="main-menu_title">
+                Quản lý sinh viên
+              </a>
+              <ul class="main-hide main-menu_item-list">
+                <li>
+                  <a href="/admin/view-students">Xem danh sách sinh viên</a>
+                </li>
+                <li>
+                  <a href="/admin/edit-students">Sửa thông tin sinh viên</a>
+                </li>
+                <li><a href="/admin/delete-students">Xóa sinh viên</a></li>
+              </ul>
+            </li>
+            <li class="main-menu_item">
+              <a href="/admin/view-courses" class="main-menu_title"
+                >Quản lý khóa học</a
+              >
+              <ul class="main-hide main-menu_item-list">
+                <li><a href="/admin/add-course">Thêm khóa học</a></li>
+                <li><a href="/admin/edit-course">Sửa khóa học</a></li>
+                <li><a href="/admin/delete-course">Xóa khóa học</a></li>
+              </ul>
+            </li>
+            <li class="main-menu_item main-menu_item-single">
+              <a href="/admin/view-feedback">Quản lý phản hồi</a>
+            </li>
+            <li class="main-menu_item main-menu_item-single">
+              <a href="/admin/history">Lịch sử tư vấn</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-right">
+        <h2>Tổng quan</h2>
+        <p>
+          Chào mừng trở lại, quản trị viên! Tại đây bạn có thể quản lý người
+          dùng, xem báo cáo và hơn thế nữa.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

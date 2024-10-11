@@ -1,0 +1,37 @@
+table.student-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+table.student-list thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+table.student-list th,
+table.student-list td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+table.student-list tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+table.student-list tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table.student-list a {
+  color: #009879;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+table.student-list a:hover {
+  text-decoration: underline;
+}
