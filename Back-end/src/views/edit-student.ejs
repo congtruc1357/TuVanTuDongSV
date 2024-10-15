@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách sinh viên</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/viewStudents.css" />
+    <!-- CSS file -->
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <main class="main">
+      <%- include('partials/menu') %>
+      <div class="main-right">
+        <h1>Danh Sách Sinh Viên</h1>
+        <table class="table-sinhvien">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên Sinh Viên</th>
+              <th>Email</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% DSSinhVien.forEach((sinhvien, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= sinhvien.tenNguoiDung %></td>
+              <td><%= sinhvien.email %></td>
+              <td>
+                <i class="fa fa-pencil-square-o"></i>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

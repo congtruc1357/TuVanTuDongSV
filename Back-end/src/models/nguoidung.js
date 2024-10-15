@@ -30,6 +30,20 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "NguoiDung",
+      tableName: "nguoidungs",
+      hooks: {
+        async afterCreate(nguoiDung, options) {
+          if (nguoiDung.vaiTro === "SinhVien") {
+            await sequelize.models.ThongTinSinhVien.create({
+              hoTen: nguoiDung.tenNguoiDung,
+              maSinhVien: 0,
+              email: nguoiDung.email,
+              idChuyenNganh: 1,
+              idNguoiDung: nguoiDung.id,
+            });
+          }
+        },
+      },
       timestamps: true,
       freezeTableName: true,
     }

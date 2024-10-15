@@ -1,37 +1,38 @@
-table.student-list {
-  width: 100%;
+.main-title {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.table-sinhvien {
+  width: 80%;
+  margin: 0 auto;
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 18px;
-  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-table.student-list thead tr {
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
+.table-sinhvien th,
+.table-sinhvien td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
 
-table.student-list th,
-table.student-list td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
+.table-sinhvien th {
+  background-color: #4caf50;
+  color: white;
+  padding-top: 12px;
 }
 
-table.student-list tbody tr:hover {
-  background-color: #f1f1f1;
+.table-sinhvien tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-table.student-list tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+.table-sinhvien tr:hover {
+  background-color: #ddd;
 }
 
-table.student-list a {
-  color: #009879;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-table.student-list a:hover {
-  text-decoration: underline;
+.table-sinhvien td {
+  font-size: 14px;
 }

@@ -9,14 +9,11 @@ let initEbRouter = (app) => {
   router.get("/login", checkLogin, homeController.getLogin);
   router.get("/logout", homeController.getLogout);
   router.get("/register", homeController.getRegister);
+  router.get("/view-students", homeController.getViewStudens);
+  //router.get("/edit-students", homeController.getEditStudens);
 
   router.post("/login", homeController.postLogin);
   router.post("/register", homeController.postRegister);
-  /*router.get("/register", homeController.getRegister);
-  //router.get("/login", homeController.getLogin);
-  router.get("/views-student", homeController.getViewStudens);
-
-  router.post("/login", homeController.postLogin);*/
 
   return app.use("/", router);
 };

@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    return queryInterface.bulkInsert("KhoaHoc", [
+    return queryInterface.bulkInsert("KhoaHocs", [
       {
         tenKhoaHoc: "Lập trình web",
         moTa: "Khóa học về lập trình web sử dụng JavaScript",
