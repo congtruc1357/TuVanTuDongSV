@@ -30,14 +30,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         unique: true,
       },
-      idChuyenNganh: {
+      chuyenNganhId: {
         type: DataTypes.INTEGER,
         references: {
           model: "ChuyenNganhs",
           key: "id",
         },
       },
-      idNguoiDung: {
+      nguoiDungId: {
         type: DataTypes.INTEGER,
         references: {
           model: "NguoiDungs",

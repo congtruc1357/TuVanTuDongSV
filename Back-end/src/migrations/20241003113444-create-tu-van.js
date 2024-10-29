@@ -13,8 +13,14 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      idGoiY: {
+      goiYId: {
         type: Sequelize.INTEGER,
+        references: {
+          model: "GoiYs",
+          key: "id",
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
       createdAt: {
         allowNull: false,

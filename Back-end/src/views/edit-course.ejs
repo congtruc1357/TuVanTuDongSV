@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chỉnh Sửa Khóa Học</title>
+    <link rel="stylesheet" href="/edit.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chỉnh Sửa Khóa Học</h1>
+      <form
+        action="/edit-course/<%= course.id %>"
+        method="POST"
+        class="edit-form"
+      >
+        <div class="form-group">
+          <label for="tenKhoaHoc">Tên khóa học:</label>
+          <input
+            type="text"
+            name="tenKhoaHoc"
+            value="<%= course.tenKhoaHoc %>"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="moTa">Mô tả:</label>
+          <input type="text" name="moTa" value="<%= course.moTa %>" required />
+        </div>
+
+        <button type="submit" class="btn-submit">Cập nhật</button>
+      </form>
+    </div>
+  </body>
+</html>

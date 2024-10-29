@@ -1,0 +1,33 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.student-info {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}

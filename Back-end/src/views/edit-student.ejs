@@ -3,45 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh sách sinh viên</title>
-    <link rel="stylesheet" href="/reset.css" />
-    <link rel="stylesheet" href="/home.css" />
-    <link rel="stylesheet" href="/footer.css" />
-    <link rel="stylesheet" href="/viewStudents.css" />
-    <!-- CSS file -->
+    <title>Chỉnh Sửa Thông Tin Người Dùng</title>
+    <link rel="stylesheet" href="/edit.css" />
   </head>
   <body>
-    <%- include('partials/header') %>
+    <div class="container">
+      <h1>Chỉnh Sửa Thông Tin Sinh Viên</h1>
+      <form action="/edit-student/<%= user.id %>" method="POST" class="edit-form">
+        <div class="form-group">
+          <label for="tenNguoiDung">Tên người dùng:</label>
+          <input
+            type="text"
+            name="tenNguoiDung"
+            value="<%= user.tenNguoiDung %>"
+            required
+          />
+        </div>
 
-    <main class="main">
-      <%- include('partials/menu') %>
-      <div class="main-right">
-        <h1>Danh Sách Sinh Viên</h1>
-        <table class="table-sinhvien">
-          <thead>
-            <tr>
-              <th>STT</th>
-              <th>Tên Sinh Viên</th>
-              <th>Email</th>
-              <th>Hành động</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% DSSinhVien.forEach((sinhvien, index) => { %>
-            <tr>
-              <td><%= index + 1 %></td>
-              <td><%= sinhvien.tenNguoiDung %></td>
-              <td><%= sinhvien.email %></td>
-              <td>
-                <i class="fa fa-pencil-square-o"></i>
-              </td>
-            </tr>
-            <% }) %>
-          </tbody>
-        </table>
-      </div>
-    </main>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" value="<%= user.email %>" required />
+        </div>
 
-    <%- include('partials/footer') %>
+        <div class="form-group">
+          <label for="vaiTro">Vai trò:</label>
+          <select name="vaiTro" required>
+            <option value="sinhVien" <%= user.vaiTro === 'sinhVien' ? 'selected' : "" %>>Sinh viên</option>
+            <option value="quanTri" <%= user.vaiTro === 'quanTriVien' ? 'selected' : "" %>>Quản trị viên</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Cập nhật</button>
+      </form>
+    </div>
   </body>
 </html>

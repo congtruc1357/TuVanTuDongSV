@@ -14,6 +14,14 @@ module.exports = {
      */
     return queryInterface.bulkInsert("nguoidungs", [
       {
+        tenNguoiDung: "Nguyen Van P",
+        email: "P.nguyen@example.com",
+        matKhau: "123",
+        vaiTro: "SinhVien",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      /*{
         tenNguoiDung: "Nguyen Van A",
         email: "a.nguyen@example.com",
         matKhau: "123",
@@ -52,7 +60,7 @@ module.exports = {
         vaiTro: "SinhVien",
         createdAt: new Date(),
         updatedAt: new Date(),
-      },
+      },*/
     ]);
   },
 

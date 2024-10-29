@@ -26,14 +26,16 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      idchuyenNganh: {
+      chuyenNganhId: {
         type: Sequelize.INTEGER,
         references: {
           model: "ChuyenNganhs",
           key: "id",
         },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
-      idNguoiDung: {
+      nguoiDungId: {
         type: Sequelize.INTEGER,
         references: {
           model: "NguoiDungs",

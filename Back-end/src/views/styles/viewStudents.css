@@ -36,3 +36,41 @@
 .table-sinhvien td {
   font-size: 14px;
 }
+
+.btn-edit {
+  padding: 5px 10px;
+  background-color: #337ab7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-edit:hover {
+  background-color: #286090;
+}
+
+.btn-delete {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c9302c;
+}
+
+.btn-info {
+  padding: 5px 10px;
+  background-color: #dcea21;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  background-color: #ddea21cc;
+}

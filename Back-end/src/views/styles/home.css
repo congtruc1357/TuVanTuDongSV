@@ -71,6 +71,7 @@ header h1 {
 
 /* Main content */
 .main {
+  min-height: 500px;
   background: white;
   margin-top: 20px;
   border-radius: 10px;

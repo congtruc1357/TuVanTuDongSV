@@ -25,7 +25,7 @@ module.exports = {
         onDelete: "CASCADE",
         onUpdate: "CASCADE",
       },
-      idTuVan: {
+      tuVanId: {
         type: Sequelize.INTEGER,
         references: {
           model: "TuVans",

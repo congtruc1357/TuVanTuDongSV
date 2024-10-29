@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/viewStudents.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <main class="main">
+      <%- include('partials/menu') %>
+      <div class="main-right">
+        <h1 class="main-title">Danh Sách Khóa học</h1>
+        <table class="table-sinhvien">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên khóa học</th>
+              <th>Mô tả</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% DSKhoaHoc.forEach((course, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= course.tenKhoaHoc %></td>
+              <td><%= course.moTa %></td>
+              <td>
+                <a href="/edit-course/<%= course.id %>" class="btn-edit"
+                  >Chỉnh sửa</a
+                >
+                <form
+                  action="/delete-course/<%= course.id %>"
+                  method="POST"
+                  style="display: inline"
+                >
+                  <button
+                    type="submit"
+                    class="btn-delete"
+                    onclick='return confirm("Bạn có chắc chắn muốn xóa khóa học này?")'
+                  >
+                    Xóa
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

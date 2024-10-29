@@ -17,15 +17,6 @@ module.exports = (sequelize, DataTypes) => {
   GoiY.init(
     {
       noiDung: { type: DataTypes.TEXT, allowNull: false },
-      tuVanId: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: "TuVan",
-          key: "id",
-        },
-        onDelete: "CASCADE",
-        onUpdate: "CASCADE",
-      },
     },
     {
       sequelize,

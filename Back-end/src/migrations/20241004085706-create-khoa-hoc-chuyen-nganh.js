@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      idKhoaHoc: {
+      khoaHocId: {
         type: Sequelize.INTEGER,
         references: {
           model: "KhoaHocs",
@@ -19,7 +19,7 @@ module.exports = {
         onUpdate: "CASCADE",
         allowNull: false,
       },
-      idChuyenNganh: {
+      chuyenNganhId: {
         type: Sequelize.INTEGER,
         references: {
           model: "ChuyenNganhs",

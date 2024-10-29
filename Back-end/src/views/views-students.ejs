@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danh sách sinh viên</title>
+
     <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="/home.css" />
     <link rel="stylesheet" href="/footer.css" />
@@ -23,6 +24,7 @@
               <th>STT</th>
               <th>Tên Sinh Viên</th>
               <th>Email</th>
+              <th>Hành động</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +33,27 @@
               <td><%= index + 1 %></td>
               <td><%= sinhvien.tenNguoiDung %></td>
               <td><%= sinhvien.email %></td>
+              <td>
+                <a href="/edit-student/<%= sinhvien.id %>" class="btn-edit"
+                  >Chỉnh sửa</a
+                >
+                <form
+                  action="/delete-student/<%= sinhvien.id %>"
+                  method="POST"
+                  style="display: inline"
+                >
+                  <button
+                    type="submit"
+                    class="btn-delete"
+                    onclick='return confirm("Bạn có chắc chắn muốn xóa người dùng này?")'
+                  >
+                    Xóa
+                  </button>
+                </form>
+                <a href="/view/<%= sinhvien.id%>" class="btn-info"
+                  >Xem thông tin</a
+                >
+              </td>
             </tr>
             <% }) %>
           </tbody>

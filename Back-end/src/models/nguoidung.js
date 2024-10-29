@@ -34,12 +34,25 @@ module.exports = (sequelize, DataTypes) => {
       hooks: {
         async afterCreate(nguoiDung, options) {
           if (nguoiDung.vaiTro === "SinhVien") {
+            const latestSinhVien =
+              await sequelize.models.ThongTinSinhVien.findOne({
+                order: [["maSinhVien", "DESC"]],
+              });
+
+            const maxCount = latestSinhVien
+              ? parseInt(latestSinhVien.maSinhVien.slice(2), 10)
+              : 0;
+
+            const newMaSinhVien = `${(maxCount + 1)
+              .toString()
+              .padStart(10, "0")}`;
+
             await sequelize.models.ThongTinSinhVien.create({
               hoTen: nguoiDung.tenNguoiDung,
-              maSinhVien: 0,
+              maSinhVien: newMaSinhVien,
               email: nguoiDung.email,
-              idChuyenNganh: 1,
-              idNguoiDung: nguoiDung.id,
+              chuyenNganhId: 1,
+              nguoiDungId: nguoiDung.id,
             });
           }
         },
